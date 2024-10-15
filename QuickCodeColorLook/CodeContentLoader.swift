@@ -11,7 +11,7 @@ class CodeContentLoader: ObservableObject {
   
   private var shouldCancel = false
   
-  func loadFile(at url: URL, maxFileSize: Int64 = 50 * 1024 * 1024) {
+  func loadFile(at url: URL, maxFileSize: Int64 = 5 * 1024 * 1024) {
     self.isLoading = true
     self.shouldCancel = false
     self.attributedContent = AttributedString()
