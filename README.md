@@ -15,10 +15,13 @@
 
 ### Download from release or from the repository
 Unzip, move somewhere such as /Applications, run once, quit the app: macOS should acknowledge the Quicklook Extension .
-Uninstall: as the extension stays within the app, remove the app to remove the extension.
+Uninstall: as the extension stays within the app, remove the app to remove the extension.  
 
-<img width="1049" alt="ss1" src="https://github.com/user-attachments/assets/6cfd81c6-133d-4a33-bfd8-487a21bfa950">
-<img width="1009" alt="ss2" src="https://github.com/user-attachments/assets/76517a29-f8a6-424d-a74c-284d1ae901f0">
+
+![ss2_lanczos](https://github.com/user-attachments/assets/45b5521d-a45a-4e25-953b-8a816149d1ad)
+
+  
+![ss1_lanczos](https://github.com/user-attachments/assets/df6605b5-b4e8-45ed-88af-60a3d98997ab)
 
 I made the app because I was straining my eyes quicklooking python scripts, and I don't like to wait for Xcode to load, and I don't like installing things that are too complex or not Gatekeeper friendly.  
 
