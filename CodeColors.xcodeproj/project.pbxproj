@@ -11,7 +11,35 @@
 		34B4DB172CBCAD7E001F31C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B4DB162CBCAD7E001F31C6 /* ContentView.swift */; };
 		34B4DB192CBCAD7F001F31C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34B4DB182CBCAD7F001F31C6 /* Assets.xcassets */; };
 		34B4DB1C2CBCAD7F001F31C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34B4DB1B2CBCAD7F001F31C6 /* Preview Assets.xcassets */; };
+		34B4DB2A2CBCADFD001F31C6 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34B4DB292CBCADFD001F31C6 /* Quartz.framework */; };
+		34B4DB372CBCADFD001F31C6 /* QuickCodeColorLook.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 34B4DB272CBCADFD001F31C6 /* QuickCodeColorLook.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		34B4DB3D2CBCC51D001F31C6 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B4DB2C2CBCADFD001F31C6 /* PreviewViewController.swift */; };
+		34B4DB3E2CBCC5F3001F31C6 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B4DB2E2CBCADFD001F31C6 /* PreviewProvider.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		34B4DB352CBCADFD001F31C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34B4DB092CBCAD7E001F31C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34B4DB262CBCADFD001F31C6;
+			remoteInfo = QuickCodeColorLook;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		34B4DB3B2CBCADFD001F31C6 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				34B4DB372CBCADFD001F31C6 /* QuickCodeColorLook.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		34B4DB112CBCAD7E001F31C6 /* CodeColors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeColors.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,6 +48,12 @@
 		34B4DB182CBCAD7F001F31C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34B4DB1B2CBCAD7F001F31C6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		34B4DB1D2CBCAD7F001F31C6 /* CodeColors.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CodeColors.entitlements; sourceTree = "<group>"; };
+		34B4DB272CBCADFD001F31C6 /* QuickCodeColorLook.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = QuickCodeColorLook.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		34B4DB292CBCADFD001F31C6 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		34B4DB2C2CBCADFD001F31C6 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		34B4DB2E2CBCADFD001F31C6 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
+		34B4DB332CBCADFD001F31C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34B4DB342CBCADFD001F31C6 /* QuickCodeColorLook.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuickCodeColorLook.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +64,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		34B4DB242CBCADFD001F31C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34B4DB2A2CBCADFD001F31C6 /* Quartz.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -37,6 +79,8 @@
 			isa = PBXGroup;
 			children = (
 				34B4DB132CBCAD7E001F31C6 /* CodeColors */,
+				34B4DB2B2CBCADFD001F31C6 /* QuickCodeColorLook */,
+				34B4DB282CBCADFD001F31C6 /* Frameworks */,
 				34B4DB122CBCAD7E001F31C6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				34B4DB112CBCAD7E001F31C6 /* CodeColors.app */,
+				34B4DB272CBCADFD001F31C6 /* QuickCodeColorLook.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,6 +114,25 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		34B4DB282CBCADFD001F31C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				34B4DB292CBCADFD001F31C6 /* Quartz.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		34B4DB2B2CBCADFD001F31C6 /* QuickCodeColorLook */ = {
+			isa = PBXGroup;
+			children = (
+				34B4DB2C2CBCADFD001F31C6 /* PreviewViewController.swift */,
+				34B4DB2E2CBCADFD001F31C6 /* PreviewProvider.swift */,
+				34B4DB332CBCADFD001F31C6 /* Info.plist */,
+				34B4DB342CBCADFD001F31C6 /* QuickCodeColorLook.entitlements */,
+			);
+			path = QuickCodeColorLook;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -79,15 +143,34 @@
 				34B4DB0D2CBCAD7E001F31C6 /* Sources */,
 				34B4DB0E2CBCAD7E001F31C6 /* Frameworks */,
 				34B4DB0F2CBCAD7E001F31C6 /* Resources */,
+				34B4DB3B2CBCADFD001F31C6 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				34B4DB362CBCADFD001F31C6 /* PBXTargetDependency */,
 			);
 			name = CodeColors;
 			productName = CodeColors;
 			productReference = 34B4DB112CBCAD7E001F31C6 /* CodeColors.app */;
 			productType = "com.apple.product-type.application";
+		};
+		34B4DB262CBCADFD001F31C6 /* QuickCodeColorLook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34B4DB382CBCADFD001F31C6 /* Build configuration list for PBXNativeTarget "QuickCodeColorLook" */;
+			buildPhases = (
+				34B4DB232CBCADFD001F31C6 /* Sources */,
+				34B4DB242CBCADFD001F31C6 /* Frameworks */,
+				34B4DB252CBCADFD001F31C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuickCodeColorLook;
+			productName = QuickCodeColorLook;
+			productReference = 34B4DB272CBCADFD001F31C6 /* QuickCodeColorLook.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -100,6 +183,9 @@
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					34B4DB102CBCAD7E001F31C6 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					34B4DB262CBCADFD001F31C6 = {
 						CreatedOnToolsVersion = 15.4;
 					};
 				};
@@ -118,6 +204,7 @@
 			projectRoot = "";
 			targets = (
 				34B4DB102CBCAD7E001F31C6 /* CodeColors */,
+				34B4DB262CBCADFD001F31C6 /* QuickCodeColorLook */,
 			);
 		};
 /* End PBXProject section */
@@ -129,6 +216,13 @@
 			files = (
 				34B4DB1C2CBCAD7F001F31C6 /* Preview Assets.xcassets in Resources */,
 				34B4DB192CBCAD7F001F31C6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34B4DB252CBCADFD001F31C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +238,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		34B4DB232CBCADFD001F31C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34B4DB3D2CBCC51D001F31C6 /* PreviewViewController.swift in Sources */,
+				34B4DB3E2CBCC5F3001F31C6 /* PreviewProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		34B4DB362CBCADFD001F31C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34B4DB262CBCADFD001F31C6 /* QuickCodeColorLook */;
+			targetProxy = 34B4DB352CBCADFD001F31C6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		34B4DB1E2CBCAD7F001F31C6 /* Debug */ = {
@@ -268,6 +379,7 @@
 		34B4DB212CBCAD7F001F31C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = CodeColors/CodeColors.entitlements;
@@ -295,6 +407,7 @@
 		34B4DB222CBCAD7F001F31C6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = CodeColors/CodeColors.entitlements;
@@ -319,6 +432,60 @@
 			};
 			name = Release;
 		};
+		34B4DB392CBCADFD001F31C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = QuickCodeColorLook/QuickCodeColorLook.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 46WUYUUA8V;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QuickCodeColorLook/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = QuickCodeColorLook;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oil3.CodeColors.QuickCodeColorLook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		34B4DB3A2CBCADFD001F31C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = QuickCodeColorLook/QuickCodeColorLook.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 46WUYUUA8V;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QuickCodeColorLook/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = QuickCodeColorLook;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oil3.CodeColors.QuickCodeColorLook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -336,6 +503,15 @@
 			buildConfigurations = (
 				34B4DB212CBCAD7F001F31C6 /* Debug */,
 				34B4DB222CBCAD7F001F31C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34B4DB382CBCADFD001F31C6 /* Build configuration list for PBXNativeTarget "QuickCodeColorLook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34B4DB392CBCADFD001F31C6 /* Debug */,
+				34B4DB3A2CBCADFD001F31C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
