@@ -1,6 +1,6 @@
-# CodeContentLoader
+# Code Colors 
 
-**CodeContentLoader** is a 100% Swift, lightning-fast Quicklook Extension Plug-in for macOS. It's a work in progress  using native  syntax highlighting , no JavaScript, no WebKit , no RTF, no external dependencies.
+**Code Colors - Quicklook Preview plug-in** is a 100% Swift, lightning-fast Quicklook Extension Plug-in for macOS. It's a work in progress  using native  syntax highlighting , no JavaScript, no WebKit , no RTF, no external dependencies.
 
 
 ### Features
