@@ -14,8 +14,13 @@ class SyntaxRules {
       ("\\b-?\\d+(?:\\.\\d+)?\\b", NSColor.orange),
       // Booleans
       ("\\b(?:True|False|true|false)\\b", NSColor.systemBlue),
-      // Comments (single line)
-      ("#.*", NSColor.green)
+      // Comments
+      ("#.*", NSColor.green),
+      ("\"\"\".*?\"\"\"", NSColor.green),
+
+      // Python
+      ("\\b(def|class|if|else|elif|return|import|from|as|for|while|try|except|with|lambda|pass|break|continue|yield|assert|async|await)\\b", NSColor.systemPurple),
+      
     ]
     
     let swiftKeywords = [
@@ -25,7 +30,9 @@ class SyntaxRules {
       "is", "nil", "true", "false", "public", "private", "fileprivate", "internal",
       "open", "static", "extension", "protocol", "guard", "defer", "where",
       "associatedtype", "inout", "operator", "init", "super", "self", "Type",
-      "typealias", "Any", "dynamicType"
+      "typealias", "Any", "dynamicType", "return", "->",
+      "HStack", "VStack", "ScrollView", "LazyVStack", "LazyHStack", "View", "List", "Grid"
+
     ]
     let swiftKeywordPattern = "\\b(\(swiftKeywords.joined(separator: "|")))\\b"
     
@@ -39,7 +46,9 @@ class SyntaxRules {
       // Comments (single line)
       ("//.*", NSColor.green),
       // Comments (multi-line)
-      ("/\\*[^*]*\\*+(?:[^/*][^*]*\\*+)*/", NSColor.green)
+      ("/\\*[^*]*\\*+(?:[^/*][^*]*\\*+)*/", NSColor.green),
+      ("\"\"\".*?\"\"\"", NSColor.green),
+
     ]
     
     let htmlRules: [(pattern: String, color: NSColor)] = [

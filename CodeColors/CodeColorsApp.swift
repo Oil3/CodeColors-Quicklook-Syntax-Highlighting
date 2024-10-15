@@ -15,3 +15,8 @@ struct CodeColorsApp: App {
         }
     }
 }
+
+
+//
+//  Copyright Almahdi Morris Quet 2024
+//

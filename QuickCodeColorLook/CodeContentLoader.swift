@@ -1,18 +1,20 @@
+// CodeContentLoader.swift
+
 import SwiftUI
 import Combine
 
 class CodeContentLoader: ObservableObject {
-  @Published var attributedLines: [AttributedString] = []
+  @Published var attributedContent: AttributedString = AttributedString()
   @Published var isLoading = false
   @Published var totalLines = 0
   @Published var fileSize: Int64 = 0
   
   private var shouldCancel = false
   
-  func loadFile(at url: URL, maxFileSize: Int64 = 5 * 1024 * 1024) {
+  func loadFile(at url: URL, maxFileSize: Int64 = 50 * 1024 * 1024) {
     self.isLoading = true
     self.shouldCancel = false
-    self.attributedLines = []
+    self.attributedContent = AttributedString()
     
     // Check file size
     if let fileSize = try? url.resourceValues(forKeys: [.fileSizeKey]).fileSize {
@@ -39,16 +41,30 @@ class CodeContentLoader: ObservableObject {
         reader.close()
       }
       
+      var lineNumber = 1
+      
       while let line = reader.nextLine() {
         if self.shouldCancel {
           break
         }
         
-        let attributedLine = SyntaxHighlighter.highlightLine(line: line, fileExtension: fileExtension)
+        // Highlight the line
+        var attributedLine = SyntaxHighlighter.highlightLine(line: line, fileExtension: fileExtension)
+        
+        // Prepend line number
+//        var lineNumberString = AttributedString("\(lineNumber)  ")
+        //        lineNumberString.foregroundColor = .gray
+        
+        lineNumber += 1
+        
+        // Combine line number and content
+//        lineNumberString.append(attributedLine)
+        // Append newline character
+        attributedLine.append(AttributedString("\n"))
         
         DispatchQueue.main.async {
-          self.attributedLines.append(attributedLine)
-          self.totalLines = self.attributedLines.count
+          self.attributedContent.append(attributedLine)
+          self.totalLines = lineNumber - 1
         }
       }
       
@@ -62,3 +78,6 @@ class CodeContentLoader: ObservableObject {
     shouldCancel = true
   }
 }
+//
+//  Copyright Almahdi Morris Quet 2024
+//

@@ -5,7 +5,8 @@ struct SyntaxHighlighter {
     var attributedString = AttributedString()
     let lines = content.components(separatedBy: .newlines)
     let newline = AttributedString("\n")
-    
+    let userDefaults = UserDefaults(suiteName: "com.oil3.codecolors")
+
     for line in lines {
       var lineAttributedString = AttributedString(line)
       applySyntaxHighlighting(to: &lineAttributedString, fileExtension: fileExtension)
@@ -42,3 +43,6 @@ struct SyntaxHighlighter {
     }
   }
 }
+//
+//  Copyright Almahdi Morris Quet 2024
+//

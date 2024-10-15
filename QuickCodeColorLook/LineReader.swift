@@ -60,3 +60,6 @@ class LineReader {
     close()
   }
 }
+//
+//  Copyright Almahdi Morris Quet 2024
+//

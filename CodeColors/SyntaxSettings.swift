@@ -3,7 +3,7 @@ import Combine
 
 class SyntaxSettings: ObservableObject {
   static let shared = SyntaxSettings()
-  private let userDefaults = UserDefaults(suiteName: "com.oil3.codecolors")
+  let userDefaults = UserDefaults(suiteName: "com.oil3.codecolors")
   
   @Published var syntaxColors: [String: Color] = [:]
   
@@ -89,3 +89,8 @@ extension Color {
 #endif
   }
 }
+
+
+//
+//  Copyright Almahdi Morris Quet 2024
+//
