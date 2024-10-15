@@ -15,6 +15,8 @@
 		34B4DB372CBCADFD001F31C6 /* QuickCodeColorLook.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 34B4DB272CBCADFD001F31C6 /* QuickCodeColorLook.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		34B4DB3D2CBCC51D001F31C6 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B4DB2C2CBCADFD001F31C6 /* PreviewViewController.swift */; };
 		34B4DB3E2CBCC5F3001F31C6 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B4DB2E2CBCADFD001F31C6 /* PreviewProvider.swift */; };
+		34E745012CBE141900EB6061 /* SyntaxRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E745002CBE141900EB6061 /* SyntaxRules.swift */; };
+		34E745032CBE15D200EB6061 /* SyntaxHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E745022CBE15D200EB6061 /* SyntaxHighlighter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		34B4DB2E2CBCADFD001F31C6 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		34B4DB332CBCADFD001F31C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34B4DB342CBCADFD001F31C6 /* QuickCodeColorLook.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuickCodeColorLook.entitlements; sourceTree = "<group>"; };
+		34E745002CBE141900EB6061 /* SyntaxRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxRules.swift; sourceTree = "<group>"; };
+		34E745022CBE15D200EB6061 /* SyntaxHighlighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxHighlighter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,8 @@
 			children = (
 				34B4DB2C2CBCADFD001F31C6 /* PreviewViewController.swift */,
 				34B4DB2E2CBCADFD001F31C6 /* PreviewProvider.swift */,
+				34E745002CBE141900EB6061 /* SyntaxRules.swift */,
+				34E745022CBE15D200EB6061 /* SyntaxHighlighter.swift */,
 				34B4DB332CBCADFD001F31C6 /* Info.plist */,
 				34B4DB342CBCADFD001F31C6 /* QuickCodeColorLook.entitlements */,
 			);
@@ -242,6 +248,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34E745032CBE15D200EB6061 /* SyntaxHighlighter.swift in Sources */,
+				34E745012CBE141900EB6061 /* SyntaxRules.swift in Sources */,
 				34B4DB3D2CBCC51D001F31C6 /* PreviewViewController.swift in Sources */,
 				34B4DB3E2CBCC5F3001F31C6 /* PreviewProvider.swift in Sources */,
 			);

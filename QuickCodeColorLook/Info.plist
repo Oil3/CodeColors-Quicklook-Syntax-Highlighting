@@ -21,7 +21,5 @@
 		<key>NSExtensionPrincipalClass</key>
 		<string>$(PRODUCT_MODULE_NAME).PreviewViewController</string>
 	</dict>
-	<key>NSExtensionPrincipalClass</key>
-	<string>$(PRODUCT_MODULE_NAME).PreviewProvider</string>
 </dict>
 </plist>

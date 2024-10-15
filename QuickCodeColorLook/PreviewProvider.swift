@@ -1,13 +1,24 @@
-// PreviewProvider.swift
-
-import QuickLookUI
 import QuickLook
+import QuickLookUI
 import SwiftUI
+import AppKit
 
 class PreviewProvider: QLPreviewProvider {
   func providePreview(for request: QLFilePreviewRequest, handler: @escaping (QLPreviewReply?, Error?) -> Void) {
     
     DispatchQueue.global(qos: .userInitiated).async {
+      // Define the maximum file size (e.g., 5 MB)
+      let maxFileSize: Int64 = 5 * 1024 * 1024 // 5 MB
+      
+      // Check file size
+      let fileSize = (try? request.fileURL.resourceValues(forKeys: [.fileSizeKey]).fileSize) ?? 0
+      if Int64(fileSize) > maxFileSize {
+        DispatchQueue.main.async {
+          handler(nil, nil) // Skip processing large files
+        }
+        return
+      }
+      
       // Read the file content
       guard let content = try? String(contentsOf: request.fileURL, encoding: .utf8) else {
         handler(nil, nil)
@@ -28,12 +39,21 @@ class PreviewProvider: QLPreviewProvider {
       let view = ContentView(content: highlightedContent)
       
       // Create a QLPreviewReply with the SwiftUI view
-      let reply = QLPreviewReply(contextSize: CGSize(width: 800, height: 600), isBitmap: false) { (context, replyHandler) in
+      let reply = QLPreviewReply(contextSize: CGSize(width: 800, height: 600), isBitmap: true) { (context, replyHandler) in
+        
+        // Set up the NSGraphicsContext
+        NSGraphicsContext.saveGraphicsState()
+        let nsContext = NSGraphicsContext(cgContext: context, flipped: false)
+        NSGraphicsContext.current = nsContext
+        
+        // Render the SwiftUI view
         let hostingController = NSHostingController(rootView: view)
-        hostingController.view.frame = .zero
+        hostingController.view.frame = CGRect(origin: .zero, size: CGSize(width: 800, height: 600))
+        hostingController.view.layoutSubtreeIfNeeded()
+        hostingController.view.draw(hostingController.view.bounds)
         
-        // Render the SwiftUI view into the graphics context
-        
+        // Clean up
+        NSGraphicsContext.restoreGraphicsState()
         replyHandler
       }
       
@@ -46,39 +66,11 @@ struct ContentView: View {
   let content: AttributedString
   
   var body: some View {
-    ScrollView {
+    ScrollView([.vertical, .horizontal]) {
       Text(content)
         .font(.system(size: 12, weight: .regular, design: .monospaced))
         .padding()
         .background(Color(NSColor.textBackgroundColor))
     }
-  }
-}
-
-struct SyntaxHighlighter {
-  static func highlight(content: String, fileExtension: String) -> AttributedString {
-    var attributedString = AttributedString(content)
-    let nsString = content as NSString
-    let wholeRange = NSRange(location: 0, length: nsString.length)
-    
-    // Define regex patterns
-    let patterns: [(pattern: String, color: NSColor)] = [
-      ("(\"[^\"]*\"|'[^']*')", NSColor.systemTeal),          // Strings in light blue
-      ("\\b\\d+(?:\\.\\d+)?\\b", NSColor.orange),            // Numbers in orange
-      ("\\b(?:True|False|true|false)\\b", NSColor.systemBlue) // Booleans in dark blue
-    ]
-    
-    for (pattern, color) in patterns {
-      if let regex = try? NSRegularExpression(pattern: pattern, options: []) {
-        let matches = regex.matches(in: content, options: [], range: wholeRange)
-        for match in matches {
-          if let range = Range(match.range, in: attributedString) {
-            attributedString[range].foregroundColor = Color(color)
-          }
-        }
-      }
-    }
-    
-    return attributedString
   }
 }
