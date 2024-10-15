@@ -12,6 +12,9 @@
 			<array>
 				<string>public.python-script</string>
 				<string>public.yaml</string>
+				<string>public.xml</string>
+				<string>public.json</string>
+				<string>public.swift-source</string>
 			</array>
 			<key>QLSupportsSearchableItems</key>
 			<false/>

@@ -5,72 +5,37 @@ import AppKit
 
 class PreviewProvider: QLPreviewProvider {
   func providePreview(for request: QLFilePreviewRequest, handler: @escaping (QLPreviewReply?, Error?) -> Void) {
-    
-    DispatchQueue.global(qos: .userInitiated).async {
-      // Define the maximum file size (e.g., 5 MB)
-      let maxFileSize: Int64 = 5 * 1024 * 1024 // 5 MB
-      
-      // Check file size
-      let fileSize = (try? request.fileURL.resourceValues(forKeys: [.fileSizeKey]).fileSize) ?? 0
-      if Int64(fileSize) > maxFileSize {
-        DispatchQueue.main.async {
-          handler(nil, nil) // Skip processing large files
-        }
-        return
-      }
-      
-      // Read the file content
-      guard let content = try? String(contentsOf: request.fileURL, encoding: .utf8) else {
-        handler(nil, nil)
-        return
-      }
-      
-      // Determine the file type
-      let fileExtension = request.fileURL.pathExtension.lowercased()
-      guard fileExtension == "py" || fileExtension == "yaml" || fileExtension == "yml" else {
-        handler(nil, nil)
-        return
-      }
-      
-      // Apply syntax highlighting
-      let highlightedContent = SyntaxHighlighter.highlight(content: content, fileExtension: fileExtension)
-      
-      // Create the SwiftUI view
-      let view = ContentView(content: highlightedContent)
-      
-      // Create a QLPreviewReply with the SwiftUI view
-      let reply = QLPreviewReply(contextSize: CGSize(width: 800, height: 600), isBitmap: true) { (context, replyHandler) in
-        
-        // Set up the NSGraphicsContext
-        NSGraphicsContext.saveGraphicsState()
-        let nsContext = NSGraphicsContext(cgContext: context, flipped: false)
-        NSGraphicsContext.current = nsContext
-        
-        // Render the SwiftUI view
-        let hostingController = NSHostingController(rootView: view)
-        hostingController.view.frame = CGRect(origin: .zero, size: CGSize(width: 800, height: 600))
-        hostingController.view.layoutSubtreeIfNeeded()
-        hostingController.view.draw(hostingController.view.bounds)
-        
-        // Clean up
-        NSGraphicsContext.restoreGraphicsState()
-        replyHandler
-      }
-      
-      handler(reply, nil)
-    }
-  }
 }
-
+}
 struct ContentView: View {
-  let content: AttributedString
-  
+@ObservedObject var loader: CodeContentLoader
+@State private var fontSize: CGFloat = 12.0
+
   var body: some View {
-    ScrollView([.vertical, .horizontal]) {
-      Text(content)
-        .font(.system(size: 12, weight: .regular, design: .monospaced))
-        .padding()
-        .background(Color(NSColor.textBackgroundColor))
+    ScrollView {
+      LazyVStack(alignment: .leading, spacing: 0) {
+        ForEach(loader.attributedLines.indices, id: \.self) { index in
+          HStack(alignment: .top, spacing: 5) 
+          {
+            Text("\(index + 1)")
+              .font(.system(size: fontSize, weight: .regular, design: .monospaced))
+              .foregroundColor(.gray)
+              .frame(width: 40, alignment: .trailing)
+              .padding(.trailing, 5)
+    //need to fix so we can select multiple lines, and having line numbers without including them in the selection, while keeping lazy loading
+            Text(loader.attributedLines[index])
+              .font(.system(size: fontSize, weight: .regular, design: .monospaced))
+          }
+          .textSelection(.enabled)
+
+        }
+      }
+      .padding()
     }
+    .gesture(MagnificationGesture()
+      .onChanged { value in
+        self.fontSize = max(8.0, min(24.0, 12.0 * value))
+      })
   }
+
 }

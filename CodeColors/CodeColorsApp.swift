@@ -1,6 +1,6 @@
 //
 //  CodeColorsApp.swift
-//  CodeColors
+//  CodeColors: Syntax Highlighting
 //
 //  Created by Almahdi Morris on 13/10/24.
 //
@@ -11,7 +11,7 @@ import SwiftUI
 struct CodeColorsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+          SettingsView()
         }
     }
 }
