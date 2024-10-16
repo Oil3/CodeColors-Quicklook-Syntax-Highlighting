@@ -23,7 +23,7 @@ Uninstall: as the extension stays within the app, remove the app to remove the e
   
 ![ss1_lanczos](https://github.com/user-attachments/assets/df6605b5-b4e8-45ed-88af-60a3d98997ab)
 
-I made the app because I was straining my eyes quicklooking python scripts, and I don't like to wait for Xcode to load, and I don't like installing things that are too complex or not Gatekeeper friendly.  
+I made the app because I was straining my eyes quicklooking python scripts, and I don't like to wait for Xcode to load.
 
 ## Plans:
 -custom colors, color schemes
