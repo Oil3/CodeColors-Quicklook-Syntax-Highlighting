@@ -1,10 +1,11 @@
 # Code Colors 
 
-**Code Colors - Quicklook Preview plug-in** is a 100% Swift, lightning-fast Quicklook Extension Plug-in for macOS. It's a work in progress  using native  syntax highlighting , no JavaScript, no WebKit , no RTF, no external dependencies.
+**Code Colors - Quicklook Preview plug-in** is a 100% Swift, lightning-fast Quicklook Extension Plug-in for macOS.   
+It's a (fully functional) work in progress  using native  syntax highlighting , no JavaScript, no WebKit , no RTF, no external dependencies.
 
 
 ### Features
-- **Supported File Types**: `.swift`, `.py`, `.yaml`, `.xml`, `.json`, as well as files without extensions. --> please tell me what you need.
+- **Supported File Types**: `.swift`, `.py`, `.yaml`, `.xml`, `.json`, as well as files without extensions. --> Anything can be added and manually controlled, let me know.
 - **Syntax Highlighting**:  Already handles various expressions and symbols --> please tell me what else you need.
 - **Lazy Loading**: Load line per line for immediate viewing, stops when view disapears.
 - **Pure Swift**:  only the code that is necessary: the minimum.
@@ -27,5 +28,7 @@ I made the app because I was straining my eyes quicklooking python scripts, and 
 
 ## Plans:
 -custom colors, color schemes
--Chunks instead of lines for lazy loading
+
+-Chunks instead of lines for lazy loading, lines is not good enough
+
 -line numbering
