@@ -1,17 +1,17 @@
 # Code Colors 
 
-**Code Colors - Quicklook Preview plug-in** is a 100% Swift, lightning-fast Quicklook Extension Plug-in for macOS.   
-It's a (fully functional) work in progress  using native  syntax highlighting , no JavaScript, no WebKit , no RTF, no external dependencies.
+**Code Colors - Quicklook Preview plug-in** is a 100% Swift, lightning-fast Quicklook Extension Plug-in for macOS. It's a work in progress  using native  syntax highlighting , no JavaScript, no WebKit , no RTF, no external dependencies. 
 
+Lighting-fast means it's there before you hear the sound of the spacebar.
 
 ### Features
-- **Supported File Types**: `.swift`, `.py`, `.yaml`, `.xml`, `.json`, as well as files without extensions. --> Anything can be added and manually controlled, let me know.
+- **Supported File Types**: `.swift`, `.py`, `.yaml`, `.xml`, `.json`, as well as files without extensions. --> please tell me what you need.
 - **Syntax Highlighting**:  Already handles various expressions and symbols --> please tell me what else you need.
 - **Lazy Loading**: Load line per line for immediate viewing, stops when view disapears.
 - **Pure Swift**:  only the code that is necessary: the minimum.
-- **Main-Thread Offloading**: All file loading and processing are done off the main thread, ensuring your system remains responsive.
-- **As safe as your file**: The app is sandboxed, hardened, notarized, doesn't require internet or any permission whatsoever,  doesn't run the files, but iterates through them as utf8 text.
-- **No File Associations**: the plug-in doesn't replace the default app for opening files, and text is selectable accross lines for copy/pasting
+- **Main-Thread Offloading**: All file loading and processing are done off the main thread, ensuring system remains responsive.
+- **As safe as your file**: Sandboxed, hardened, notarized, doesn't require internet or any permission whatsoever,  doesn't run the files, but iterates through them as utf8 text.
+- **No File Associations**: Doesn't replace the default app for opening files, and text is selectable accross lines for copy/pasting
 
 
 ### Download from release or from the repository
@@ -28,7 +28,7 @@ I made the app because I was straining my eyes quicklooking python scripts, and 
 
 ## Plans:
 -custom colors, color schemes
-
--Chunks instead of lines for lazy loading, lines is not good enough
-
+-Chunks instead of lines for lazy loading
 -line numbering
+-Editing is very possible however that might go beyond the scope, if so, has to be optional and extra care for overwrite.
+-
