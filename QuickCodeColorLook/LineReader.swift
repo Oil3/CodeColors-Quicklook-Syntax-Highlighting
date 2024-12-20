@@ -7,7 +7,7 @@ class LineReader {
   var buffer: Data
   var atEof: Bool = false
   
-  private let accessQueue = DispatchQueue(label: "LineReaderAccessQueue")
+  private let accessQueue = DispatchQueue(label: "LineReaderAccessQueue", qos: .userInitiated, attributes: .concurrent)
   
   init?(url: URL, encoding: String.Encoding = .utf8, chunkSize: Int = 4096) {
     guard let fileHandle = try? FileHandle(forReadingFrom: url) else {

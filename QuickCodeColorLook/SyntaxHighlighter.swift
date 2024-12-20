@@ -18,10 +18,14 @@ struct SyntaxHighlighter {
   
   static func highlightLine(line: String, fileExtension: String) -> AttributedString {
     var lineAttributedString = AttributedString(line)
-    applySyntaxHighlighting(to: &lineAttributedString, fileExtension: fileExtension)
-    return lineAttributedString
+    DispatchSerialQueue.global(qos: .userInteractive).async {
+      
+      applySyntaxHighlighting(to: &lineAttributedString, fileExtension: fileExtension)
+    }
+      return lineAttributedString
+    
+      
   }
-  
   static func applySyntaxHighlighting(to attributedString: inout AttributedString, fileExtension: String) {
     let nsString = String(attributedString.characters) as NSString
     let wholeRange = NSRange(location: 0, length: nsString.length)
