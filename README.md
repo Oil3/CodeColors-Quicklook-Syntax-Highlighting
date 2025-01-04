@@ -3,7 +3,7 @@
 **Code Colors - Quicklook Preview plug-in** is a 100% Swift, lightning-fast Quicklook Extension Plug-in for macOS.  
 It's a work in progress  using native  syntax highlighting , no JavaScript, no WebKit , no RTF, no external dependencies. 
 
-Lighting-fast means it's there before you hear the sound of the spacebar.
+Lighting-fast means it's there before you hear the sound of the spacebar.  `[slight exageration here]`  
 
 ### Features
 - **Any File Types**: `.swift`, `.py`, `.yaml`, `.xml`, `.json`, as well as files without extensions. --> please tell me what you need.
@@ -18,7 +18,7 @@ Lighting-fast means it's there before you hear the sound of the spacebar.
 ### Download from release or from the repository 
 
 Unzip, move somewhere such as /Applications, run once, quit the app: macOS should acknowledge the Quicklook Extension .
-Uninstall: as the extension stays within the app, remove the app to remove the extension.  `[slight exageration here]`  
+Uninstall: as the extension stays within the app, remove the app to remove the extension.   
 
 
 ![ss2_lanczos](https://github.com/user-attachments/assets/45b5521d-a45a-4e25-953b-8a816149d1ad)
