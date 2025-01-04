@@ -18,7 +18,7 @@ Lighting-fast means it's there before you hear the sound of the spacebar.
 ### Download from release or from the repository 
 
 Unzip, move somewhere such as /Applications, run once, quit the app: macOS should acknowledge the Quicklook Extension .
-Uninstall: as the extension stays within the app, remove the app to remove the extension.  
+Uninstall: as the extension stays within the app, remove the app to remove the extension.  `[slight exageration here]`  
 
 
 ![ss2_lanczos](https://github.com/user-attachments/assets/45b5521d-a45a-4e25-953b-8a816149d1ad)
