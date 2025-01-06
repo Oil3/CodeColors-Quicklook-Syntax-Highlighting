@@ -7,11 +7,11 @@ Lighting-fast means it's there before the sound the spacebar makes ends.  `[when
 ### Features
 - **Any File Types**: `.swift`, `.py`, `.yaml`, `.xml`, `.json`, as well as files without extensions. --> please tell me what you need.
 - **Syntax Highlighting**:  Already handles various expressions and symbols --> please tell me what else you need.
-- **Lazy Loading**: Load line per chunks for immediate viewing, stops when view disapears.
-- **Pure Swift**:  only the code that is necessary: the minimum.
+- **Lazy Loading**: Load sline per chunks for immediate viewing, stops when view disapears.
+- **Pure Swift**:  Only the code that is necessary: the minimum.
 - **Main-Thread Offloading**: All file loading and processing are done off the main thread, safeguarding against't system freezes.
 - **As safe as your file**: Sandboxed, hardened, notarized, doesn't require internet or any permission whatsoever,  doesn't run the files, but applies formatting on strings that match a pattern.
-- **No File Associations**: Doesn't replace the default app for opening files, and text is selectable accross lines for copy/pasting
+- **No File Associations**: Doesn't replace the default app for opening files, and text is selectable accross lines for copy/pasting.
 
 
 ### Download from release or from the repository 
