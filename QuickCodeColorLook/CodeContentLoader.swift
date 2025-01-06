@@ -1,83 +1,122 @@
-// CodeContentLoader.swift
-
 import SwiftUI
 import Combine
 
 class CodeContentLoader: ObservableObject {
-  @Published var attributedContent: AttributedString = AttributedString()
-  @Published var isLoading = false
-  @Published var totalLines = 0
-  @Published var fileSize: Int64 = 0
-  
-  private var shouldCancel = false
-  
-  func loadFile(at url: URL, maxFileSize: Int64 = 5 * 1024 * 1024) {
-    self.isLoading = true
-    self.shouldCancel = false
-    self.attributedContent = AttributedString()
+    @Published var attributedContent: AttributedString = AttributedString()
+    @Published var isLoading = false
+    @Published var totalLines = 0
+    @Published var progress: Double = 0.0
+    @Published var errorMessage: String? = nil
     
-    // Check file size
-    if let fileSize = try? url.resourceValues(forKeys: [.fileSizeKey]).fileSize {
-      self.fileSize = Int64(fileSize)
-      if self.fileSize > maxFileSize {
-        DispatchQueue.main.async {
-          self.isLoading = false
+    private var shouldCancel = false
+    private var cachedLines: [AttributedString] = []
+    private var reader: LineReader?
+    private let batchSize = 100
+    private let preloadThreshold = 20
+    private let maxLines = 10_000
+
+    func loadFile(at url: URL, maxFileSize: Int64 = 5 * 1024 * 1024) {
+        cleanup() // Reset the loader
+        
+        // Check file size
+        if let fileSize = try? url.resourceValues(forKeys: [.fileSizeKey]).fileSize {
+            if Int64(fileSize) > maxFileSize {
+                DispatchQueue.main.async {
+                    self.errorMessage = "File size exceeds the preview limit of \(maxFileSize / 1024 / 1024) MB."
+                    self.isLoading = false
+                }
+                return
+            }
         }
-        return
-      }
+        
+        let fileExtension = url.pathExtension.lowercased()
+        self.isLoading = true
+        self.shouldCancel = false
+
+        DispatchQueue.global(qos: .userInitiated).async {
+            guard let reader = LineReader(url: url) else {
+                DispatchQueue.main.async {
+                    self.errorMessage = "Unable to open file. Unsupported format or corrupt file."
+                    self.isLoading = false
+                }
+                return
+            }
+            self.reader = reader
+            self.processLines(fileExtension: fileExtension)
+        }
     }
     
-    let fileExtension = url.pathExtension.lowercased()
-    
-    DispatchQueue.global(qos: .userInitiated).async {
-      guard let reader = LineReader(url: url) else {
-        DispatchQueue.main.async {
-          self.isLoading = false
+    private func processLines(fileExtension: String) {
+        var lineNumber = 0
+        var batch = [AttributedString]()
+        
+        while !shouldCancel {
+            guard let line = reader?.nextLine() else { break }
+            let highlightedLine = SyntaxHighlighter.highlightLine(line: line, fileExtension: fileExtension)
+            batch.append(highlightedLine)
+            lineNumber += 1
+            
+            if batch.count >= batchSize {
+                appendBatch(batch, lineNumber: lineNumber)
+                batch.removeAll()
+            }
+
+            // Stop processing if max lines are reached
+            if lineNumber >= maxLines {
+                DispatchQueue.main.async {
+                    self.errorMessage = "Preview truncated to \(self.maxLines) lines."
+                    self.isLoading = false
+                }
+                break
+            }
         }
-        return
-      }
-      
-      defer {
-        reader.close()
-      }
-      
-      var lineNumber = 1
-      
-      while let line = reader.nextLine() {
-        if self.shouldCancel {
-          break
+        
+        if !batch.isEmpty {
+            appendBatch(batch, lineNumber: lineNumber)
         }
-        
-        // Highlight the line
-        var attributedLine = SyntaxHighlighter.highlightLine(line: line, fileExtension: fileExtension)
-        
-        // Prepend line number
-//        var lineNumberString = AttributedString("\(lineNumber)  ")
-        //        lineNumberString.foregroundColor = .gray
-        
-        lineNumber += 1
-        
-        // Combine line number and content
-//        lineNumberString.append(attributedLine)
-        // Append newline character
-        attributedLine.append(AttributedString("\n"))
         
         DispatchQueue.main.async {
-          self.attributedContent.append(attributedLine)
-          self.totalLines = lineNumber - 1
+            self.isLoading = false
         }
-      }
-      
-      DispatchQueue.main.async {
-        self.isLoading = false
-      }
     }
-  }
-  
-  func cancelLoading() {
-    shouldCancel = true
-  }
+    
+    private func appendBatch(_ batch: [AttributedString], lineNumber: Int) {
+        DispatchQueue.main.async {
+            self.cachedLines.append(contentsOf: batch)
+            self.totalLines = lineNumber
+            self.progress = Double(lineNumber) / Double(self.maxLines)
+        }
+    }
+    
+    func getLine(at index: Int) -> AttributedString {
+        guard index >= 0 && index < cachedLines.count else {
+            return AttributedString("")
+        }
+        return cachedLines[index]
+    }
+    
+    func loadNextBatchIfNeeded(currentIndex: Int) {
+        guard currentIndex >= totalLines - preloadThreshold, !isLoading else { return }
+        processLines(fileExtension: "swift") // Replace with the actual file extension
+    }
+    
+    func cancelLoading() {
+        shouldCancel = true
+        cleanup()
+    }
+    
+    private func cleanup() {
+        shouldCancel = true
+        reader?.close()
+        reader = nil
+        cachedLines.removeAll()
+        attributedContent = AttributedString()
+        isLoading = false
+        totalLines = 0
+        progress = 0.0
+        errorMessage = nil
+    }
 }
 //
-//  Copyright Almahdi Morris Quet 2024
+//  Copyright Almahdi Morris Quet 2024-2025
 //
