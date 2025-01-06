@@ -1,17 +1,16 @@
 # Code Colors 
 
 **Code Colors - Quicklook Preview plug-in** is a 100% Swift, lightning-fast Quicklook Extension Plug-in for macOS.  
-It's a work in progress  using native  syntax highlighting , no JavaScript, no WebKit , no RTF, no external dependencies. 
-
+It is different than others because it uses the new SwiftUI 'Text' capabilities, no html nor rtf workarounds 
 Lighting-fast means it's there before you hear the sound of the spacebar.  `[slight exageration here]`  
 
 ### Features
 - **Any File Types**: `.swift`, `.py`, `.yaml`, `.xml`, `.json`, as well as files without extensions. --> please tell me what you need.
 - **Syntax Highlighting**:  Already handles various expressions and symbols --> please tell me what else you need.
-- **Lazy Loading**: Load line per line for immediate viewing, stops when view disapears.
+- **Lazy Loading**: Load line per chunks for immediate viewing, stops when view disapears.
 - **Pure Swift**:  only the code that is necessary: the minimum.
-- **Main-Thread Offloading**: All file loading and processing are done off the main thread, ensuring system remains responsive.
-- **As safe as your file**: Sandboxed, hardened, notarized, doesn't require internet or any permission whatsoever,  doesn't run the files, but iterates through them as utf8 text.
+- **Main-Thread Offloading**: All file loading and processing are done off the main thread, safeguarding against't system freezes.
+- **As safe as your file**: Sandboxed, hardened, notarized, doesn't require internet or any permission whatsoever,  doesn't run the files, but applies formatting on strings that match a pattern.
 - **No File Associations**: Doesn't replace the default app for opening files, and text is selectable accross lines for copy/pasting
 
 
@@ -30,6 +29,7 @@ I made the app because I was straining my eyes quicklooking python scripts, and 
 
 ## Plans:
 - custom colors, color schemes
-- Chunks instead of lines for lazy loading
-- line numbering
-- Editing is very possible to implement however that might go beyond the scope, if so, has to be optional and extra care for overwrite.
+- import profiles  
+- line numbering  
+- Editing is very possible to implement however that might go beyond the scope  
+- Search?  
