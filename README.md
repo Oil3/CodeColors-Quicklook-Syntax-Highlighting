@@ -1,8 +1,8 @@
 # Code Colors 
 
 **Code Colors - Quicklook Preview plug-in** is a 100% Swift, lightning-fast Quicklook Extension Plug-in for macOS.  
-It is different than others because it uses the new SwiftUI 'Text' capabilities, no html nor rtf workarounds 
-Lighting-fast means it's there before you hear the sound of the spacebar.  `[slight exageration here]`  
+It is different than others because it uses the new SwiftUI 'Text' capabilities, no html, no rtf,.  
+Lighting-fast means it's there before the sound the spacebar makes ends.  `[when filesize less than 4 memory pages]`  
 
 ### Features
 - **Any File Types**: `.swift`, `.py`, `.yaml`, `.xml`, `.json`, as well as files without extensions. --> please tell me what you need.
