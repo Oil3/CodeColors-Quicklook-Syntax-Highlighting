@@ -11,8 +11,7 @@ Lighting-fast means it's there before the sound the spacebar makes ends.  `[when
 - **Pure Swift**:  Only the code that is necessary: the minimum.
 - **Main-Thread Offloading**: All file loading and processing are done off the main thread, safeguarding against't system freezes.
 - **As safe as your file**: Sandboxed, hardened, notarized, doesn't require internet or any permission whatsoever,  doesn't run the files, but applies formatting on strings that match a pattern.
-- **No File Associations**: Doesn't replace the default app for opening files, and text is selectable accross lines for copy/pasting.
-
+- **No File Associations**: Doesn't replace the default app for opening files
 
 ### Download from release or from the repository 
 
@@ -27,9 +26,11 @@ Uninstall: as the extension stays within the app, remove the app to remove the e
 
 I made the app because I was straining my eyes quicklooking python scripts, and I don't like to wait for Xcode to load.
 
-## Plans:
+## Todo:
+`#1 fix text is selectable accross lines for copy/pasting`
 - custom colors, color schemes
 - import profiles  
 - line numbering  
 - Editing is very possible to implement however that might go beyond the scope  
-- Search?  
+- Search?
+  
