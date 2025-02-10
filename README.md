@@ -2,7 +2,7 @@
 
 **Code Colors - Quicklook Preview plug-in** is a 100% Swift, lightning-fast Quicklook Extension Plug-in for macOS.  
 It is different than others because it uses the new SwiftUI 'Text' capabilities, no html, no rtf,.  
-Lighting-fast means it's there before the sound the spacebar makes ends.  `[when filesize less than 4 memory pages]`  
+Lighting-fast means it's there before the sound the spacebar makes ends.  `[when filesize less than 4 memory pages]`   
 
 ### Features
 - **Any File Types**: `.swift`, `.py`, `.yaml`, `.xml`, `.json`, as well as files without extensions. --> please tell me what you need.
@@ -28,9 +28,6 @@ I made the app because I was straining my eyes quicklooking python scripts, and 
 
 ## Todo:
 `#1 fix text is selectable accross lines for copy/pasting`
-- custom colors, color schemes
+- need to fix last bugs before upload latest, even faster, version
 - import profiles  
-- line numbering  
-- Editing is very possible to implement however that might go beyond the scope  
-- Search?
   
