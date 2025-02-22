@@ -34,7 +34,7 @@ Direct download latest [Universal binary (Silicon and Intel)](https://github.com
   
 ![ss1_lanczos](https://github.com/user-attachments/assets/df6605b5-b4e8-45ed-88af-60a3d98997ab)
 
-I made the app because I was straining my eyes quicklooking python scripts, and I don't like to wait for Xcode to load.
+I made the app because I was straining my eyes quicklooking python scripts, and _a mac is a mac and it needs to stay comfortable._
 
 ## Todo:
 - custom colors
