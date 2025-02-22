@@ -20,7 +20,6 @@ Update: _replace_ the older app. (or delete), run again.
 Uninstall: as the extension stays within the app, remove the app to remove the extension.   
 
 
-![ss2_lanczos](https://github.com/user-attachments/assets/45b5521d-a45a-4e25-953b-8a816149d1ad)
 
   
 ![ss1_lanczos](https://github.com/user-attachments/assets/df6605b5-b4e8-45ed-88af-60a3d98997ab)
@@ -34,4 +33,5 @@ I made the app because I was straining my eyes quicklooking python scripts, and 
 
 ## Truth in breaking the sound barrier
 
-  
+  [Screen Recording 2025-02-21 at 7.57.07 P720M (1).webm](https://github.com/user-attachments/assets/6b0b2024-b001-4179-9e9f-dca328691eca)
+
