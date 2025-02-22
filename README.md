@@ -8,10 +8,10 @@ It is different than others because it uses new SwiftUI Text capabilities: no ht
 Very fast as in _breaks the sound barrier_: it's opened before the sound of your spacebar/click ends.  `tested on M1 max and M4 pro`   
 
 ### Features
-- **Any File Types**: Such as `.swift`, `.py`, `.yaml`, `.xml`, `.json`, `.c`, `.h`, `.mm`, `.1`, `.gradle`... etc, as well as files without extension. --> please tell me what you need.
+- **Any File Types**: More than 60 extensions, such as `.swift`, `.py`, `.yaml`, `.xml`, `.json`, `.c`, `.h`, `.mm`, `.1`, `.gradle`... etc, as well as files without extension. --> please tell me what you need.
 - **Syntax Highlighting**:  Still basic
 - **Lazy Loading**: Loads lines per chunks for immediate viewing, stops when view disapears.
-- **Pure Swift**:  Only the code that is necessary: the minimum.
+- **Pure Swift**:  100% Swift with only the code that is necessary: the minimum and nothing external.
 - **Main-Thread Offloading**: All file loading and processing are done off the main thread, safeguarding against't system freezes.
 - **As safe as your file**: Sandboxed, hardened, notarized, doesn't require internet or any permission whatsoever,  doesn't run the files, but applies formatting on strings that match a pattern.
 - **No File Associations**: Doesn't replace the default app for opening files, doesn't interfere with workflow.
