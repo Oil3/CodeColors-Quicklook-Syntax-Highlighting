@@ -16,7 +16,7 @@ Very fast as in _breaks the sound barrier_: it's opened before the sound of your
 - **As safe as your file**: Sandboxed, hardened, notarized, doesn't require internet or any permission whatsoever,  doesn't run the files, but applies formatting on strings that match a pattern.
 - **No File Associations**: Doesn't replace the default app for opening files, doesn't interfere with workflow.
 
-### Download from release or from the repository   
+### Download from Releases or from the repository   
 
 Direct download latest [Universal binary (Silicon and Intel)](https://github.com/Oil3/CodeColors-Quicklook-Syntax-Highlighting/releases/download/LatestFeb2025UniversalBinary/CodeColors.2025Feb.Universal.Binary.zip).
   
