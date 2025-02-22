@@ -5,7 +5,7 @@
 
 **Code Colors - Quicklook Preview** is a free, very fast Quicklook Extensionfor macOS.    
 It is different than others because it uses new SwiftUI Text capabilities: no html, no rtf, no js.   
-Very fast as in _breaks the sound barrier_: it's opened before the sound of your spacebar/click ends.  [`*`](https://github.com/Oil3/CodeColors-Quicklook-Syntax-Highlighting/tree/oil3#truth-in-breaking-the-sound-barrier)   
+Very fast as in _breaks the sound barrier_: it's opened before the sound of your spacebar/click ends.  [`*`](https://github.com/Oil3/CodeColors-Quicklook-Syntax-Highlighting/tree/oil3#sound-on-truth-of-breaking-the-sound-barrier)   
 
 ### Features
 - **Any File Types**: More than 60 extensions, such as `.swift`, `.py`, `.yaml`, `.xml`, `.json`, `.c`, `.h`, `.mm`, `.1`, `.gradle`... etc, as well as files without extension. --> please tell me what you need.
