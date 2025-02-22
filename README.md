@@ -52,6 +52,6 @@ The first priority was to handle a _23M characters in 200K duplicated lines_ swi
   [Screen Recording 2025-02-21 at 7.57.07 P720M (1).webm](https://github.com/user-attachments/assets/6b0b2024-b001-4179-9e9f-dca328691eca)  
   
   
-  Before, I was straining my eyes, quicklooking scripts, and _a mac is a mac and it needs to stay comfortable._
+ _a mac is a mac and it needs to stay comfortable._
 
 
