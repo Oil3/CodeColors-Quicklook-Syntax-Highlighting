@@ -13,7 +13,7 @@ Very fast as in _breaks the sound barrier_: it's opened before the sound of your
 - **Syntax Highlighting**:  Still basic.
 - **Lazy Loading**: Loads lines per 96KB chunks for immediate viewing, stops when view disappears.
 - **Pure Swift**:  100% Swift with only the code that is necessary: the minimum and nothing external.
-- **Main-Thread Offloading**: All file loading and processing are done off the main thread, safeguarding against't system freezes.
+- **Main-Thread Offloading**: All file loading and processing are done off the main thread, safeguarding against system freezes.
 - **As safe as your file**: Sandboxed, hardened, notarized, doesn't require internet or any permission whatsoever,  doesn't run the files, but applies formatting on strings that match a pattern.
 - **No File Associations**: Doesn't replace the default app for opening files, doesn't interfere with workflow.  
 
