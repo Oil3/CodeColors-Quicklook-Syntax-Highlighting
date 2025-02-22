@@ -11,7 +11,7 @@ Very fast as in _breaks the sound barrier_: it's opened before the sound of your
 - **Any File Types**: More than 60 extensions, such as `.swift`, `.py`, `.yaml`, `.xml`, `.json`, `.c`, `.h`, `.mm`, `.1`, `.gradle`... etc, as well as files without extension. But not Markdown. [Info.plit full list](https://github.com/Oil3/CodeColors-Quicklook-Syntax-Highlighting/blob/oil3/QuickCodeColorLook/Info.plist). 
 
 - **Syntax Highlighting**:  Still basic.
-- **Lazy Loading**: Loads lines per 96KB chunks for immediate viewing, stops when view disapears.
+- **Lazy Loading**: Loads lines per 96KB chunks for immediate viewing, stops when view disappears.
 - **Pure Swift**:  100% Swift with only the code that is necessary: the minimum and nothing external.
 - **Main-Thread Offloading**: All file loading and processing are done off the main thread, safeguarding against't system freezes.
 - **As safe as your file**: Sandboxed, hardened, notarized, doesn't require internet or any permission whatsoever,  doesn't run the files, but applies formatting on strings that match a pattern.
