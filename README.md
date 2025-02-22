@@ -8,7 +8,7 @@ It is different than others because it uses new SwiftUI Text capabilities: no ht
 Very fast as in _breaks the sound barrier_: it's opened before the sound of your spacebar/click ends.  [`*`](https://github.com/Oil3/CodeColors-Quicklook-Syntax-Highlighting/tree/oil3#sound-on-truth-of-breaking-the-sound-barrier)   
 
 ### Features
-- **Any File Types**: More than 60 extensions, such as `.swift`, `.py`, `.yaml`, `.xml`, `.json`, `.c`, `.h`, `.mm`, `.1`, `.gradle`... etc, as well as files without extension. --> please tell me what you need.
+- **Any File Types**: More than 60 extensions, such as `.swift`, `.py`, `.yaml`, `.xml`, `.json`, `.c`, `.h`, `.mm`, `.1`, `.gradle`... etc, as well as files without extension. [Info.plit full list](https://github.com/Oil3/CodeColors-Quicklook-Syntax-Highlighting/blob/oil3/QuickCodeColorLook/Info.plist).
 - **Syntax Highlighting**:  Still basic
 - **Lazy Loading**: Loads lines per chunks for immediate viewing, stops when view disapears.
 - **Pure Swift**:  100% Swift with only the code that is necessary: the minimum and nothing external.
