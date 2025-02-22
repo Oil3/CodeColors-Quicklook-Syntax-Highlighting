@@ -3,7 +3,7 @@
   <h1 align="center"> Code Colors </h1>
 </p>
 
-**Code Colors - Quicklook Preview** is a very fast, free Quicklook Extension Plug-in for macOS.    
+**Code Colors - Quicklook Preview** is a free, very fast Quicklook Extensionfor macOS.    
 It is different than others because it uses new SwiftUI Text capabilities: no html, no rtf, no js.   
 Very fast as in _breaks the sound barrier_: it's opened before the sound of your spacebar/click ends.  `tested on M1 max and M4 pro`   
 
