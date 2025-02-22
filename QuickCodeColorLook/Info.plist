@@ -2,6 +2,50 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>BuildMachineOSBuild</key>
+	<string>24B2082</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>QuickCodeColorLook</string>
+	<key>CFBundleExecutable</key>
+	<string>QuickCodeColorLook</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.oil3.CodeColors.QuickCodeColorLook</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>QuickCodeColorLook</string>
+	<key>CFBundlePackageType</key>
+	<string>XPC!</string>
+	<key>CFBundleShortVersionString</key>
+	<string>2025Feb</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1.2</string>
+	<key>DTCompiler</key>
+	<string>com.apple.compilers.llvm.clang.1_0</string>
+	<key>DTPlatformBuild</key>
+	<string>24C94</string>
+	<key>DTPlatformName</key>
+	<string>macosx</string>
+	<key>DTPlatformVersion</key>
+	<string>15.2</string>
+	<key>DTSDKBuild</key>
+	<string>24C94</string>
+	<key>DTSDKName</key>
+	<string>macosx15.2</string>
+	<key>DTXcode</key>
+	<string>1620</string>
+	<key>DTXcodeBuild</key>
+	<string>16C5032a</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.developer-tools</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>12.2</string>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionAttributes</key>
@@ -11,11 +55,67 @@
 			<key>QLSupportedContentTypes</key>
 			<array>
 				<string>public.python-script</string>
+				<string>public.shell-script</string>
+				<string>com.barebones.bbedit.ini-configuration</string>
+				<string>public.c-source</string>
+				<string>public.c-plus-plus-source</string>
+				<string>public.c-header</string>
+				<string>public.make-source</string>
+				<string>dyn.ah62d4rv4ge80e2py</string>
+				<string>dyn.ah62d4rv4ge81a22</string>
+				<string>dyn.ah62d4rv4ge80e2p4qz0a</string>
+				<string>dyn.ah62d4rv4ge80e8xq</string>
+				<string>dyn.ah62d4rv4ge80865x</string>
+				<string>public.protobuf-source</string>
+				<string>dyn.ah62d4rv4ge804ra</string>
+				<string>dyn.ah62d4rv4ge80e7pmrvwa</string>
+				<string>dyn.ah62d4rv4ge80c5k</string>
+				<string>public.ruby-script</string>
+				<string>public.php-script</string>
+				<string>public.perl-script</string>
+				<string>public.objective-c-source</string>
+				<string>public.log</string>
+				<string>public.lex-source</string>
+				<string>org.golang.go-source</string>
+				<string>org.kotlinlang.kotlin-source</string>
+				<string>public.assembly-source</string>
+				<string>public.fortran-source</string>
+				<string>public.nasm-assembly-source</string>
+				<string>public.pascal-source</string>
+				<string>public.m3u-playlist</string>
+				<string>dyn.ah62d4rv4ge80c22</string>
+				<string>dyn.ah62d4rv4ge81a55esr2gn22</string>
+				<string>dyn.ah62d4rv4ge81a55e</string>
+				<string>dyn.ah62d4rv4ge80w5u</string>
+				<string>com.barebones.bbedit.toml-source</string>
+				<string>com.barebones.bbedit.actionscript-source</string>
+				<string>com.barebones.bbedit.arduino-source</string>
+				<string>com.barebones.bbedit.go-source</string>
+				<string>com.barebones.bbedit.typescript-source</string>
+				<string>com.barebones.bbedit.rust-source</string>
+				<string>com.barebones.bbedit.vbscript-source</string>
+				<string>public.csh-script</string>
+				<string>public.css</string>
+				<string>dyn.ah62d4rv4ge80s6xbqv0gn</string>
+				<string>public.object-code</string>
+				<string>public.html</string>
+				<string>dyn.ah62d4rv4ge81a6xtsbw1e7dmqz3u</string>
+				<string>com.sun.java-source</string>
+				<string>dyn.ah62d4rv4ge80y4py</string>
+				<string>dyn.ah62d4rv4ge81g7pu</string>
+				<string>dyn.ah62d4rv4ge8064psrmuu</string>
+				<string>dyn.ah62d4rv4ge81e65y</string>
+				<string>dyn.ah62d4rv4ge8xc</string>
+				<string>dyn.ah62d4rv4ge80k</string>
+				<string>com.netscape.javascript-source</string>
+				<string>dyn.ah62d4rv4ge80g5pbrrwu</string>
 				<string>public.yaml</string>
 				<string>public.data</string>
+				<string>public.objective-c-plus-plus-source</string>
 				<string>public.xml</string>
 				<string>public.json</string>
 				<string>public.swift-source</string>
+				<string>com.apple.property-list</string>
 			</array>
 			<key>QLSupportsSearchableItems</key>
 			<false/>
@@ -23,7 +123,9 @@
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.quicklook.preview</string>
 		<key>NSExtensionPrincipalClass</key>
-		<string>$(PRODUCT_MODULE_NAME).PreviewViewController</string>
+		<string>QuickCodeColorLook.PreviewViewController</string>
 	</dict>
+	<key>NSHumanReadableCopyright</key>
+	<string>Quet Almahdi Morris</string>
 </dict>
 </plist>
