@@ -41,7 +41,7 @@ I made the app because I was straining my eyes quicklooking python scripts, and 
 - import profiles
 
 
-## Truth in breaking the sound barrier
+## Sound-on truth of breaking the sound barrier
 
   [Screen Recording 2025-02-21 at 7.57.07 P720M (1).webm](https://github.com/user-attachments/assets/6b0b2024-b001-4179-9e9f-dca328691eca)
 
