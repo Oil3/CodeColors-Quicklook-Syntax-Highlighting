@@ -18,9 +18,11 @@ Very fast as in _breaks the sound barrier_: it's opened before the sound of your
 
 ### Download from release or from the repository 
 
-Unzip, move somewhere such as /Applications, run once, quit the app: macOS should acknowledge the Quicklook Extension .
-Update: _replace_ the older app. (or delete), run again.
-Uninstall: as the extension stays within the app, remove the app to remove the extension.   
+Unzip, move somewhere such as /Applications, run once, quit the app: macOS should acknowledge the Quicklook Extension.  
+
+Update: _replace_ the older app. (or delete), run again.  
+
+Uninstall: as the extension stays within the app, remove the app to remove the extension.    
 
 
 
