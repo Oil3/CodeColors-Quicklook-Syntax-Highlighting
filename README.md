@@ -1,8 +1,11 @@
-# Code Colors 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/90744f44-008e-4ce8-b3f5-7de635a67b16" height="128">
+  <h1 align="center"> Code Colors </h1>
+</p>
 
-**Code Colors - Quicklook Preview plug-in** is a very fast, free Quicklook Extension Plug-in for macOS.    
+**Code Colors - Quicklook Preview** is a very fast, free Quicklook Extension Plug-in for macOS.    
 It is different than others because it uses new SwiftUI Text capabilities: no html, no rtf, no js.   
-Very fast as in _breaks the sound barrier_ it's opened before the sound the spacebar makes ends.  `tested on M1 max and M4 pro`   
+Very fast as in _breaks the sound barrier_: it's opened before the sound of your spacebar/click ends.  `tested on M1 max and M4 pro`   
 
 ### Features
 - **Any File Types**: Such as `.swift`, `.py`, `.yaml`, `.xml`, `.json`, `.c`, `.h`, `.mm`, `.1`, `.gradle`... etc, as well as files without extensions. --> please tell me what you need.
