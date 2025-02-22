@@ -16,13 +16,18 @@ Very fast as in _breaks the sound barrier_: it's opened before the sound of your
 - **As safe as your file**: Sandboxed, hardened, notarized, doesn't require internet or any permission whatsoever,  doesn't run the files, but applies formatting on strings that match a pattern.
 - **No File Associations**: Doesn't replace the default app for opening files, doesn't interfere with workflow.
 
-### Download from release or from the repository 
+### Download from release or from the repository   
 
-Unzip, move somewhere such as /Applications, run once, quit the app: macOS should acknowledge the Quicklook Extension.  
+Direct download latest [Universal binary (Silicon and Intel)](https://github.com/Oil3/CodeColors-Quicklook-Syntax-Highlighting/releases/download/LatestFeb2025UniversalBinary/CodeColors.2025Feb.Universal.Binary.zip).
+  
+## Install  
+>Launch the app once. This registers the extension as the extension itself stays within the app bundle.  
 
-Update: _replace_ the older app. (or delete), run again.  
+## Uninstall  
+>Delete the app.  
 
-Uninstall: as the extension stays within the app, remove the app to remove the extension.    
+## Update  
+>Replace the older app with the newer app.  MacOS looks for the extension in the app: if app is moved, a relaunch might be needed. 
 
 
 
