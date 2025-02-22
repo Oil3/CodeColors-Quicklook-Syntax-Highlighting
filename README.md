@@ -34,7 +34,6 @@ Direct download latest [Universal binary (Silicon and Intel)](https://github.com
   
 ![ss1_lanczos](https://github.com/user-attachments/assets/df6605b5-b4e8-45ed-88af-60a3d98997ab)
 
-I made the app because I was straining my eyes quicklooking python scripts, and _a mac is a mac and it needs to stay comfortable._
 
 ## Todo:
 - custom colors
@@ -43,5 +42,9 @@ I made the app because I was straining my eyes quicklooking python scripts, and 
 
 ## Sound-on truth of breaking the sound barrier
 
-  [Screen Recording 2025-02-21 at 7.57.07 P720M (1).webm](https://github.com/user-attachments/assets/6b0b2024-b001-4179-9e9f-dca328691eca)
+  [Screen Recording 2025-02-21 at 7.57.07 P720M (1).webm](https://github.com/user-attachments/assets/6b0b2024-b001-4179-9e9f-dca328691eca)  
+  
+  
+  Before, I was straining my eyes, quicklooking scripts, and _a mac is a mac and it needs to stay comfortable._
+
 
