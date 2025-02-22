@@ -8,13 +8,16 @@ It is different than others because it uses new SwiftUI Text capabilities: no ht
 Very fast as in _breaks the sound barrier_: it's opened before the sound of your spacebar/click ends.  [`*`](https://github.com/Oil3/CodeColors-Quicklook-Syntax-Highlighting/tree/oil3#sound-on-truth-of-breaking-the-sound-barrier)   
 
 ### Features
-- **Any File Types**: More than 60 extensions, such as `.swift`, `.py`, `.yaml`, `.xml`, `.json`, `.c`, `.h`, `.mm`, `.1`, `.gradle`... etc, as well as files without extension. [Info.plit full list](https://github.com/Oil3/CodeColors-Quicklook-Syntax-Highlighting/blob/oil3/QuickCodeColorLook/Info.plist).
-- **Syntax Highlighting**:  Still basic
-- **Lazy Loading**: Loads lines per chunks for immediate viewing, stops when view disapears.
+- **Any File Types**: More than 60 extensions, such as `.swift`, `.py`, `.yaml`, `.xml`, `.json`, `.c`, `.h`, `.mm`, `.1`, `.gradle`... etc, as well as files without extension. But not Markdown. [Info.plit full list](https://github.com/Oil3/CodeColors-Quicklook-Syntax-Highlighting/blob/oil3/QuickCodeColorLook/Info.plist). 
+
+- **Syntax Highlighting**:  Still basic.
+- **Lazy Loading**: Loads lines per 96KB chunks for immediate viewing, stops when view disapears.
 - **Pure Swift**:  100% Swift with only the code that is necessary: the minimum and nothing external.
 - **Main-Thread Offloading**: All file loading and processing are done off the main thread, safeguarding against't system freezes.
 - **As safe as your file**: Sandboxed, hardened, notarized, doesn't require internet or any permission whatsoever,  doesn't run the files, but applies formatting on strings that match a pattern.
-- **No File Associations**: Doesn't replace the default app for opening files, doesn't interfere with workflow.
+- **No File Associations**: Doesn't replace the default app for opening files, doesn't interfere with workflow.  
+
+
 
 ### Download from Releases or from the repository   
 
@@ -31,14 +34,18 @@ Direct download latest [Universal binary (Silicon and Intel)](https://github.com
 
 
 
+
   
 ![ss1_lanczos](https://github.com/user-attachments/assets/df6605b5-b4e8-45ed-88af-60a3d98997ab)
 
 
-## Todo:
-- custom colors
-- import profiles
+### Issues/todo:  
+The first priority was to handle a _23M characters in 200K duplicated lines_ swift test file, with immediate render, no freeze and a quick memory release. 
 
+- Implementing the logic for customizing the colors which is God willing for next update; right now these are just my colors.
+- Fixing an issue where a negative number doesn't have its `-` sign colored.
+- import profiles
+- Markdown is not in the list to not interfere until we have the settings to choose which extension to ignore.
 
 ## Sound-on truth of breaking the sound barrier
 
