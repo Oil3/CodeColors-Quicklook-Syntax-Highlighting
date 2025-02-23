@@ -40,7 +40,7 @@ Direct download latest [Universal binary (Silicon and Intel)](https://github.com
 
 
 ### Issues/todo:  
-The first priority was to handle a _23M characters in 200K duplicated lines_ swift test file, with immediate render, no freeze and a quick memory release. 
+The first priority _was_ to handle a _test file with 23millions characters in 200thousands  lines_, with immediate render, no freeze and a quick memory release. 
 
 - Implementing the logic for customizing the colors which is God willing for next update; right now these are just my colors.
 - Fixing an issue where a negative number doesn't have its `-` sign colored.
